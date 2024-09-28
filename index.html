@@ -4,8 +4,191 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hockeys</title>
+    <!-- Tailwind CSS -->
+    <!-- DaisyUI -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'coral-red': '#FF4240',
+                        'ocean-green': '#49D293',
+                        'pastel-orange': '#FFB546',
+                        'blueberry': '#4C8DF1',
+                        clifford: '#da373d',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        .font-manrope {
+            font-family: "Manrope", sans-serif;
+        }
+    </style>
+
 </head>
-<body>
-    
+<body class="font-manrope">
+    <header class="container mx-auto p-5 lg:px-0">
+        <nav>
+            <div class="navbar bg-base-100">
+                <div class="navbar-start">
+                    <div class="dropdown">
+                        <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" />
+                            </svg>
+                        </div>
+                        <ul tabindex="0" class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
+                            <li><a class="hover:text-coral-red hover:bg-transparent">Home</a></li>
+                            <li><a class="hover:text-coral-red hover:bg-transparent">About</a></li>
+                            <li><a class="hover:text-coral-red hover:bg-transparent">Pages</a></li>
+                            <li><a class="hover:text-coral-red hover:bg-transparent">Blog</a></li>
+                            <li><a class="hover:text-coral-red hover:bg-transparent">Contact</a></li>
+                        </ul>
+                    </div>
+                    <a>
+                        <h2 class="text-3xl font-extrabold">Hockey<span class="text-coral-red">’</span>s</h2>
+                    </a>
+                </div>
+                <div class="navbar-center hidden lg:flex">
+                    <ul class="menu menu-horizontal px-1">
+                        <li><a class="hover:text-coral-red hover:bg-transparent">Home</a></li>
+                        <li><a class="hover:text-coral-red hover:bg-transparent">About</a></li>
+                        <li><a class="hover:text-coral-red hover:bg-transparent">Pages</a></li>
+                        <li><a class="hover:text-coral-red hover:bg-transparent">Blog</a></li>
+                        <li><a class="hover:text-coral-red hover:bg-transparent">Contact</a></li>
+                        
+                    </ul>
+                </div>
+                <div class="navbar-end gap-6">
+                    <i class="text-gray-500 text-xl hidden lg:flex fa-solid fa-magnifying-glass"></i>
+                    <a class="px-6 py-3 bg-coral-red rounded-lg text-white">Get Ticket</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container mx-auto p-5 lg:px-0">
+        <!-- Hero section -->
+        <section class="py-12">
+            <div class="carousel h-[550px] w-full">
+                <div id="slide1" class="carousel-item relative w-full">
+                    <img src="images/hero.png" class="w-full" />
+                    <div class="absolute bottom-8 left-8 flex gap-4">
+                        <a href="#slide4" class="btn btn-circle bg-black hover:bg-black text-white border-black hover:border-black">❮</a>
+                        <a href="#slide2" class="btn btn-circle bg-black hover:bg-black text-white border-black hover:border-black">❯</a>
+                    </div>
+                    <div class="p-8 bg-black absolute bottom-10 right-10 max-w-xl space-y-4 rounded-2xl ">
+                        <h2 class="text-2xl font-extrabold text-white">Meet all the heroes from the field</h2>
+                        <p class="text-base text-gray-500">
+                            Dit amet consectetur. Condimentum dignissim adipiscing aliquam turpis placerat dolor. Purus urna in sit nullam proin.
+                        </p>
+                    </div>
+                </div>
+                <div id="slide2" class="carousel-item relative w-full">
+                    <img src="images/hero.png" class="w-full" />
+                    <div class="absolute bottom-8 left-8 flex gap-4">
+                        <a href="#slide1" class="btn btn-circle bg-black hover:bg-black text-white border-black hover:border-black">❮</a>
+                        <a href="#slide3" class="btn btn-circle bg-black hover:bg-black text-white border-black hover:border-black">❯</a>
+                    </div>
+                    <div class="p-8 bg-black absolute bottom-10 right-10 max-w-xl space-y-4 rounded-2xl ">
+                        <h2 class="text-2xl font-extrabold text-white">Meet all the heroes from the field</h2>
+                        <p class="text-base text-gray-500">
+                            Dit amet consectetur. Condimentum dignissim adipiscing aliquam turpis placerat dolor. Purus urna in sit nullam proin.
+                        </p>
+                    </div>
+                </div>
+                <div id="slide3" class="carousel-item relative w-full">
+                    <img src="images/hero.png" class="w-full" />
+                    <div class="absolute bottom-8 left-8 flex gap-4">
+                        <a href="#slide2" class="btn btn-circle bg-black hover:bg-black text-white border-black hover:border-black">❮</a>
+                        <a href="#slide4" class="btn btn-circle bg-black hover:bg-black text-white border-black hover:border-black">❯</a>
+                    </div>
+                    <div class="p-8 bg-black absolute bottom-10 right-10 max-w-xl space-y-4 rounded-2xl ">
+                        <h2 class="text-2xl font-extrabold text-white">Meet all the heroes from the field</h2>
+                        <p class="text-base text-gray-500">
+                            Dit amet consectetur. Condimentum dignissim adipiscing aliquam turpis placerat dolor. Purus urna in sit nullam
+                            proin.
+                        </p>
+                    </div>
+                </div>
+                <div id="slide4" class="carousel-item relative w-full">
+                    <img src="images/hero.png" class="w-full" />
+                    <div class="absolute bottom-8 left-8 flex gap-4">
+                        <a href="#slide3" class="btn btn-circle bg-black hover:bg-black text-white border-black hover:border-black">❮</a>
+                        <a href="#slide1" class="btn btn-circle bg-black hover:bg-black text-white border-black hover:border-black">❯</a>
+                    </div>
+                    <div class="p-8 bg-black absolute bottom-10 right-10 max-w-xl space-y-4 rounded-2xl ">
+                        <h2 class="text-2xl font-extrabold text-white">Meet all the heroes from the field</h2>
+                        <p class="text-base text-gray-500">
+                            Dit amet consectetur. Condimentum dignissim adipiscing aliquam turpis placerat dolor. Purus urna in sit nullam
+                            proin.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Professional Hockeys Club -->
+         <section class="py-12">
+            <div class="text-center space-y-6 border-y-2 border-dashed py-8">
+                <h3 class="text-4xl font-extrabold">Professional Hockeys Club</h3>
+                <p class="text-base text-gray-500 max-w-xl mx-auto">
+                    Dit amet consectetur. Condimentum dignissim adipiscing aliquam turpis placerat dolor. Purus urna in sit nullam proin.
+                </p>
+            </div>
+
+            <div class="flex flex-col md:flex-row gap-8 mt-12">
+                <div class="text-center">
+                    <div class="radial-progress bg-gray-100 text-coral-red" style="--value:87;"
+                        role="progressbar">
+                        87%
+                    </div>
+                    <h3 class="mt-8 text-xl font-semibold">Prayer Facility</h3>
+                    <p class="mt-4 text-gray-500">Amet consectetur. Condimentum dignissim adipiscing.</p>
+                </div>
+
+                <div class="text-center">
+                    <div class="radial-progress bg-gray-100 text-ocean-green" style="--value:95;" role="progressbar">
+                        95%
+                    </div>
+                    <h3 class="mt-8 text-xl font-semibold">Experienced Coach</h3>
+                    <p class="mt-4 text-gray-500">Amet consectetur. Condimentum dignissim adipiscing.</p>
+                </div>
+
+                <div class="text-center">
+                    <div class="radial-progress bg-gray-100 text-pastel-orange" style="--value:90;" role="progressbar">
+                        90%
+                    </div>
+                    <h3 class="mt-8 text-xl font-semibold">Senior Player</h3>
+                    <p class="mt-4 text-gray-500">Amet consectetur. Condimentum dignissim adipiscing.</p>
+                </div>
+
+                <div class="text-center">
+                    <div class="radial-progress bg-gray-100 text-blueberry" style="--value:80;" role="progressbar">
+                        80%
+                    </div>
+                    <h3 class="mt-8 text-xl font-semibold">Training Ground</h3>
+                    <p class="mt-4 text-gray-500">Amet consectetur. Condimentum dignissim adipiscing.</p>
+                </div>
+
+            </div>
+         </section>
+    </main>
+
+    <footer></footer>
 </body>
 </html>
